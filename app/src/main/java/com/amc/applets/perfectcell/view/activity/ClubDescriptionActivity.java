@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +26,8 @@ public class ClubDescriptionActivity extends AppCompatActivity {
     CoordinatorLayout coordinatorLayout;
     @Bind(R.id.missionDescriptionTextView)
     public TextView missionDescriptionTextView;
+    @Bind(R.id.logoImageView)
+    public ImageView logoImageView;
     /*@Bind(R.id.needsListView)
     public ListView needListView;*/
 
@@ -68,6 +71,17 @@ public class ClubDescriptionActivity extends AppCompatActivity {
         textView.setTextSize(24);
         snackbar.setDuration(Snackbar.LENGTH_INDEFINITE).show();
         missionDescriptionTextView.setText(LoremIpsum.getInstance().getParagraphs(1, 1));
+
+        if(clubName.toLowerCase().equals("applets"))
+            logoImageView.setImageResource(ClubsIcons.Applets.getImage());
+        else if(clubName.toLowerCase().equals("eclipse"))
+            logoImageView.setImageResource(ClubsIcons.Conjure.getImage());
+        else if(clubName.toLowerCase().equals("omer"))
+            logoImageView.setImageResource(ClubsIcons.Omer.getImage());
+        else if(clubName.toLowerCase().equals("rockets"))
+            logoImageView.setImageResource(ClubsIcons.Rockets.getImage());
+        else if(clubName.toLowerCase().equals("eclipse") || clubName.toLowerCase().equals("éclipse"))
+            logoImageView.setImageResource(ClubsIcons.Rockets.getImage());
         /*needListView.setAdapter(new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, getDummyNeeds()));*/
     }
@@ -82,5 +96,28 @@ public class ClubDescriptionActivity extends AppCompatActivity {
             needs.add("Need "+i);
         }
         return needs;
+    }
+
+    public enum ClubsIcons{
+        Applets(1,R.drawable.ic_applets),
+        Conjure(2,R.drawable.ic_conjure),
+        Omer(3,R.drawable.ic_omer),
+        Rockets(4,R.drawable.ic_rockets),
+        Eclipse(5,R.drawable.ic_eclipse);
+
+        public int getImage() {
+            return image;
+        }
+
+        public void setImage(int image) {
+            this.image = image;
+        }
+
+        private int value;
+        private int image;
+        ClubsIcons(int value, int drawableId) {
+        }
+
+
     }
 }
