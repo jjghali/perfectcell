@@ -7,8 +7,10 @@ import com.amc.applets.perfectcell.model.Receiver;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
@@ -29,11 +31,12 @@ public interface ApiInterface {
 
     @GET("/givers/(id}")
     Call<Giver> getGiversById(@Query("q") String id);
-    @GET("/users/list")
-    Call<List<AbstractUser>> listUsers();
+    @GET("/perfectcell-api/users/list")
+    Call<List<Giver>> listUsers();
 
     @GET("/getuser/{id}")
     Call<AbstractUser> getUser(@Query("q") String id);
-
+    @POST("/adduser")
+    Call<AbstractUser> createTask(@Body AbstractUser user);
 
 }

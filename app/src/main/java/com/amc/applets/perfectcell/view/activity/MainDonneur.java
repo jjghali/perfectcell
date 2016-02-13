@@ -14,15 +14,22 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.amc.applets.perfectcell.ApiClient.ApiInterface;
+import com.amc.applets.perfectcell.ApiClient.RestClient;
 import com.amc.applets.perfectcell.R;
 import com.amc.applets.perfectcell.adapter.GiverAdapter;
 import com.amc.applets.perfectcell.model.Giver;
+import com.amc.applets.perfectcell.model.Receiver;
 import com.thedeanda.lorem.LoremIpsum;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainDonneur extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,8 +56,35 @@ public class MainDonneur extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        mListView.setAdapter(new GiverAdapter(this, getDateSet()));
-        mListView.setEmptyView(emptyListGiverTextView);
+        //obtain client interface instance
+        ApiInterface api = RestClient.getClient();
+        Call<List<Giver>> call = api.listUsers();
+
+        //attempt http call and bind data to view
+        call.enqueue(new Callback<List<Giver>>() {
+            @Override
+            public void onResponse(Call<List<Giver>> call, Response<List<Giver>> response) {
+                if (response.isSuccess()) {
+
+                    // request successful (status code 200, 201)
+                    List<Giver> result = response.body();
+                    ArrayList<Giver> givers = new ArrayList<>(result);
+
+                    mListView.setAdapter(new GiverAdapter(MainDonneur.this, givers));
+                    mListView.setEmptyView(emptyListGiverTextView);
+
+                } else {
+                    //request not successful (like 400,401,403 etc)
+                    //Handle errors - display message for empty content
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Giver>> call, Throwable t) {
+                String sec = "::";
+            }
+        });
+
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
