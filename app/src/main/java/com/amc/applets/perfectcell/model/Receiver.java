@@ -10,8 +10,8 @@ public class Receiver extends AbstractUser {
     private String program;
 
 
-    public Receiver(String name, String description) {
-        super(name,description);
+    public Receiver(String name, String description, String typeUsager) {
+        super(name,description,typeUsager);
     }
 
     public ArrayList<Needs> getNeeds() {

@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="@string/role_chooser"
         android:layout_gravity="center"
+        android:textStyle="bold"
         android:textSize="24sp"/>
 
     <LinearLayout

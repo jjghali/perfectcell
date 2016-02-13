@@ -42,6 +42,7 @@ public class MainDonneur extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.donator_title);
         setContentView(R.layout.activity_main_donneur);
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -56,7 +57,7 @@ public class MainDonneur extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //obtain client interface instance
+        //obtain http client interface instance
         ApiInterface api = RestClient.getClient();
         Call<List<Giver>> call = api.listUsers();
 
@@ -68,9 +69,15 @@ public class MainDonneur extends AppCompatActivity
 
                     // request successful (status code 200, 201)
                     List<Giver> result = response.body();
-                    ArrayList<Giver> givers = new ArrayList<>(result);
+                    ArrayList<Giver> users = new ArrayList<>(result);
+                    ArrayList<Giver> filteredGivers = new ArrayList<>();
 
-                    mListView.setAdapter(new GiverAdapter(MainDonneur.this, givers));
+                    for(Giver giver : users){
+                        if(giver.getTypeUsager() != null && giver.getTypeUsager().equals("receiver")){
+                            filteredGivers.add(giver);
+                        }
+                    }
+                    mListView.setAdapter(new GiverAdapter(MainDonneur.this, filteredGivers));
                     mListView.setEmptyView(emptyListGiverTextView);
 
                 } else {
@@ -102,7 +109,7 @@ public class MainDonneur extends AppCompatActivity
         ArrayList<Giver> givers = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            Giver g = new Giver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1));
+            Giver g = new Giver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1), "giver");
             givers.add(g);
         }
         return givers;

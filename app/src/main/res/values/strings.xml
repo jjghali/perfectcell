@@ -3,30 +3,31 @@
 
     <!--Main Activity strings-->
     <string name="role_chooser">Veuillez choisir votre rôle</string>
-    <string name="role_donneur">Rôle de donneur</string>
+    <string name="role_donneur">Rôle de donateur</string>
     <string name="role_receveur">Rôle de receveur</string>
     <string name="title_activity_main2">Main2Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_main_donneur">MainDonneur</string>
-    <string name="see_more">See more</string>
-    <string name="givers_title">Givers</string>
-    <string name="receiver_title">Receiver</string>
+    <string name="action_settings">Paramètre</string>
+    <string name="title_activity_main_donneur">Donateur</string>
+    <string name="see_more">Voir plus</string>
+    <string name="givers_title">Donateur</string>
+    <string name="receiver_title">Clubs</string>
 
     <!-- Fragment -->
     <string name="club_description">Description</string>
     <string name="club_need">Ce que nous avons besoin</string>
     <string name="club_snackbar">Contacter</string>
-    <string name="title_activity_main_receveur">MainReceveur</string>
+    <string name="title_activity_main_receveur">Clubs</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="donator">Donator</string>
-    <string name="donation_type">Donation Type</string>
-    <string name="save_donation">Save donation</string>
+    <string name="donator_title">Donator Page</string>
+    <string name="donator">Donateur</string>
+    <string name="donation_type">Type de donation</string>
+    <string name="save_donation">Sauvegarder donation</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>

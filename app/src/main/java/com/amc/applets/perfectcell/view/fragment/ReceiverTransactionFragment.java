@@ -25,7 +25,7 @@ public class ReceiverTransactionFragment extends Fragment {
     private Spinner donatorSpinner,donationTypeSpinner;
     private CoordinatorLayout coordinatorLayout;
     private EditText messageET, montantET;
-    private String donationType[] = {"MONEY", "OTHERS"};
+    private String donationType[] = {"Argent", "Autre"};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
