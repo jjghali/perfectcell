@@ -21,7 +21,7 @@
                 android:src="@android:drawable/sym_def_app_icon"/>
 
             <TextView
-                android:id="@+id/receivernameTextView"
+                android:id="@+id/givernameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -30,11 +30,11 @@
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
-                android:id="@+id/receiverDescriptionTextView"
+                android:id="@+id/giverDescriptionTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/receivernameTextView"
+                android:layout_below="@+id/givernameTextView"
                 android:ellipsize="end"
                 android:lines="2"
                 android:scrollHorizontally="true"
