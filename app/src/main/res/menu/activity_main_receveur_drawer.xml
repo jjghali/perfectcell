@@ -3,8 +3,8 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_message"
-            android:title="Messages" />
+            android:id="@+id/nav_accueil"
+            android:title="Accueil" />
         <item
             android:id="@+id/nav_historique"
             android:title="Historique des donateurs" />
