@@ -81,7 +81,7 @@ public class ClubDescriptionActivity extends AppCompatActivity {
         else if(clubName.toLowerCase().equals("rockets"))
             logoImageView.setImageResource(ClubsIcons.Rockets.getImage());
         else if(clubName.toLowerCase().equals("eclipse") || clubName.toLowerCase().equals("éclipse"))
-            logoImageView.setImageResource(ClubsIcons.Rockets.getImage());
+            logoImageView.setImageResource(ClubsIcons.Eclipse.getImage());
         /*needListView.setAdapter(new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, getDummyNeeds()));*/
     }
