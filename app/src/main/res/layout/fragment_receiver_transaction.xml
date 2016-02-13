@@ -17,6 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:orientation="vertical">
 
         <TextView
@@ -35,6 +36,7 @@
         <TextView
             android:id="@+id/textView2"
             android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/donation_type"
@@ -44,8 +46,9 @@
             android:id="@+id/donationTypeSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
             android:spinnerMode="dialog"/>
-        4
+
         <EditText
             android:id="@+id/descriptionET"
             android:paddingTop="10dp"
