@@ -27,6 +27,7 @@
     <string name="donator">Donator</string>
     <string name="donation_type">Donation Type</string>
     <string name="save_donation">Save donation</string>
+    <string name="donator_title">Donator Page</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>
