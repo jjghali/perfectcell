@@ -9,22 +9,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".MainDonneur">
 
         </activity>
-
-        <activity android:name=".MainReceveur">
-
-        </activity>
+        <activity android:name=".MainDonneur"></activity>
+        <activity android:name=".MainReceveur"></activity>
         <activity android:name=".view.activity.ReceiverListActivity">
 
+
+        </activity>
+        <activity android:name=".view.activity.GiverListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".view.activity.ReceiverProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activity.ReceiverListActivity"/>
         </activity>
     </application>
 
