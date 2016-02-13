@@ -15,22 +15,80 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/role_chooser"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:textSize="24sp"/>
 
-    <Button
-        android:id="@+id/bt_donneur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/role_donneur"
-        android:layout_gravity="center_horizontal"
-        android:textSize="24sp"/>
+    <LinearLayout
+        android:id="@+id/ll_donneur"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.84"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:onClick="start_donneur_activity">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gift"
+            android:paddingTop="16dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/role_donneur"
+            android:layout_gravity="center"
+            android:paddingTop="16dp"
+            android:textSize="24sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#696969" />
+    <LinearLayout
+        android:id="@+id/ll_receveur"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delivery"
+            android:paddingTop="16dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/role_receveur"
+            android:layout_gravity="center"
+            android:paddingTop="16dp"
+            android:textSize="24sp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/bt_receveur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/role_receveur"
-        android:layout_gravity="center_horizontal"
-        android:textSize="24sp"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/bt_donneur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/role_donneur"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/bt_receveur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/role_receveur"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"/>
+    </LinearLayout>-->
 </LinearLayout>
