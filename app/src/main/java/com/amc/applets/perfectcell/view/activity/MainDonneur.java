@@ -42,6 +42,7 @@ public class MainDonneur extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.donator_title);
         setContentView(R.layout.activity_main_donneur);
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
