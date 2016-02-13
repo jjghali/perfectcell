@@ -9,34 +9,36 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.amc.applets.perfectcell.R;
+import com.amc.applets.perfectcell.adapter.GiverAdapter;
 import com.amc.applets.perfectcell.adapter.ReceiverAdapter;
+import com.amc.applets.perfectcell.model.Giver;
 import com.amc.applets.perfectcell.model.Receiver;
 import com.thedeanda.lorem.LoremIpsum;
 
 import java.util.ArrayList;
 
-public class ReceiverListActivity extends AppCompatActivity {
+public class GiverListActivity extends AppCompatActivity {
 
 
     private ListView mListView;
-    private TextView emptyListReceiverTextView;
+    private TextView emptyListGiverTextView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_receiver_list);
+        setContentView(R.layout.activity_giver_list);
 
-        setTitle(R.string.receiver_title);
-        emptyListReceiverTextView = (TextView) findViewById(R.id.emptyListReceiver);
-        mListView = (ListView) findViewById(R.id.receiverListView);
-        mListView.setAdapter(new ReceiverAdapter(this, getDateSet()));
-        mListView.setEmptyView(emptyListReceiverTextView);
+        setTitle(R.string.givers_title);
+        emptyListGiverTextView = (TextView) findViewById(R.id.emptyListGiver);
+        mListView = (ListView) findViewById(R.id.giverListView);
+        mListView.setAdapter(new GiverAdapter(this, getDateSet()));
+        mListView.setEmptyView(emptyListGiverTextView);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(ReceiverListActivity.this, ReceiverProfileActivity.class);
+                Intent i = new Intent(GiverListActivity.this, ReceiverProfileActivity.class);
                 startActivity(i);
             }
         });
@@ -44,14 +46,14 @@ public class ReceiverListActivity extends AppCompatActivity {
 
     }
 
-    public ArrayList<Receiver> getDateSet() {
-        ArrayList<Receiver> receivers = new ArrayList<>();
+    public ArrayList<Giver> getDateSet() {
+        ArrayList<Giver> givers = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            Receiver r = new Receiver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1));
-            receivers.add(r);
+            Giver g = new Giver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1));
+            givers.add(g);
         }
-        return receivers;
+        return givers;
     }
 
 }
