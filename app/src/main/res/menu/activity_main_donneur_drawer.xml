@@ -3,17 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/applets"
-            android:title="Applets" />
+            android:id="@+id/ets"
+            android:title="École de Technologie Supérieure" />
         <item
-            android:id="@+id/baja"
-            android:title="Baja" />
+            android:id="@+id/udem"
+            android:title="Université de Montréal" />
         <item
-            android:id="@+id/conjure"
-            android:title="Conjure" />
-        <item
-            android:id="@+id/Énergie"
-            android:title="Énergie-ETS" />
+            android:id="@+id/uqam"
+            android:title="Université de Québec à Montréal" />
     </group>
 
     <item android:title="Autre">
