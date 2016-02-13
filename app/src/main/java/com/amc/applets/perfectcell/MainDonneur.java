@@ -1,7 +1,9 @@
 package com.amc.applets.perfectcell;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,12 +14,15 @@ import android.view.MenuItem;
 public class MainDonneur extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_donneur);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        fragmentManager = getSupportFragmentManager();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -67,13 +72,32 @@ public class MainDonneur extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.applets) {
+            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+            Bundle args = new Bundle();
+            args.putString("clubName", "applets");
+            clubIntent.putExtra("extra", args);
+            startActivity(clubIntent);
+        } else if (id == R.id.baja) {
+            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+            Bundle args = new Bundle();
+            args.putString("clubName", "baja");
+            clubIntent.putExtra("extra", args);
+            startActivity(clubIntent);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.conjure) {
+            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+            Bundle args = new Bundle();
+            args.putString("clubName", "conjure");
+            clubIntent.putExtra("extra", args);
+            startActivity(clubIntent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.Énergie) {
+            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+            Bundle args = new Bundle();
+            args.putString("clubName", "Énergie ETS");
+            clubIntent.putExtra("extra", args);
+            startActivity(clubIntent);
 
         } else if (id == R.id.nav_send) {
 
@@ -83,4 +107,5 @@ public class MainDonneur extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

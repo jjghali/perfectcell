@@ -13,5 +13,9 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main_donneur">MainDonneur</string>
 
+    <!-- Fragment -->
+    <string name="club_description">Description</string>
+    <string name="club_need">Ce que nous avons besoin</string>
+    <string name="club_snackbar">Contacter</string>
 
 </resources>

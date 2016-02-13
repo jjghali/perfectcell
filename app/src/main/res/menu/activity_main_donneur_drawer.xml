@@ -3,16 +3,16 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/applets"
             android:title="Applets" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/baja"
             android:title="Baja" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/conjure"
             android:title="Conjure" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/Énergie"
             android:title="Énergie-ETS" />
     </group>
 
