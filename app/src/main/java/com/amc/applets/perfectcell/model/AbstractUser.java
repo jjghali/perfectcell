@@ -1,13 +1,14 @@
 package com.amc.applets.perfectcell.model;
 
 
+import java.util.ArrayList;
+
 /**
  * Created by komlan on 12/02/16.
  */
 public abstract class AbstractUser {
     private String name;
     private String description;
-    private String typeUsager;
     private ArrayList needs;
 
     private String typeUsager;
@@ -18,14 +19,6 @@ public abstract class AbstractUser {
         this.typeUsager = typeUsager;
     }
 
-    public String getTypeUsager() {
-        
-        return typeUsager;
-    }
-
-    public void setTypeUsager(String typeUsager) {
-        this.typeUsager = typeUsager;
-    }
 
     public String getName() {
         return name;
