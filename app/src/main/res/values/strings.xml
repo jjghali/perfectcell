@@ -3,8 +3,8 @@
 
     <!--Main Activity strings-->
     <string name="role_chooser">Veuillez choisir votre rôle</string>
-    <string name="role_donneur">Donneur</string>
-    <string name="role_receveur">Receveur</string>
+    <string name="role_donneur">Rôle de donneur</string>
+    <string name="role_receveur">Rôle de receveur</string>
     <string name="title_activity_main2">Main2Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

@@ -8,8 +8,11 @@ import java.util.ArrayList;
 public abstract class AbstractUser {
     private String name;
     private String description;
-    private ArrayList needs;
 
+    public AbstractUser(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 
     public String getName() {
         return name;
@@ -27,11 +30,5 @@ public abstract class AbstractUser {
         this.description = description;
     }
 
-    public ArrayList getNeeds() {
-        return needs;
-    }
 
-    public void setNeeds(ArrayList needs) {
-        this.needs = needs;
-    }
 }

@@ -19,9 +19,14 @@
         <activity
             android:name=".MainDonneur"
             android:label="@string/title_activity_main_donneur"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".ClubDescriptionActivity"
             android:parentActivityName=".MainDonneur">
+        </activity>
+
+        <activity android:name=".view.activity.ReceiverListActivity">
+
         </activity>
     </application>
 
