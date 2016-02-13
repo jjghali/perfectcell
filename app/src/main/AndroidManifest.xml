@@ -22,8 +22,6 @@
         <activity
             android:name=".view.activity.ClubDescriptionActivity"
             android:parentActivityName=".view.activity.MainDonneur"></activity>
-        <activity android:name=".view.activity.ReceiverListActivity"></activity>
-        <activity android:name=".view.activity.ReceiverProfileActivity"></activity>
         <activity
             android:name=".view.activity.MainReceveur"
             android:label="@string/title_activity_main_receveur"
