@@ -29,8 +29,8 @@ public interface ApiInterface {
 
     @GET("/givers/(id}")
     Call<Giver> getGiversById(@Query("q") String id);
-    @GET("/users/list")
-    Call<List<AbstractUser>> listUsers();
+    @GET("/perfectcell-api/users/list")
+    Call<List<Giver>> listUsers();
 
     @GET("/getuser/{id}")
     Call<AbstractUser> getUser(@Query("q") String id);
