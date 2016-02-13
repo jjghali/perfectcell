@@ -26,9 +26,9 @@ public class GiverProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giver_profile);
 
-        giverNameTextView = (TextView) findViewById(R.id.givernameTextView);
+        giverNameTextView = (TextView) findViewById(R.id.tv_donneur);
 
-        giverDescriptionTextView = (TextView) findViewById(R.id.giverDescriptionTextView);
+        giverDescriptionTextView = (TextView) findViewById(R.id.tv_description);
 
         missionTextView = (TextView) findViewById(R.id.missionTextView);
 

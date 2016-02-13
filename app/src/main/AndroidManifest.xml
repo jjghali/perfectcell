@@ -15,23 +15,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.MainReceveur" />
         <activity
             android:name=".view.activity.MainDonneur"
             android:label="@string/title_activity_main_donneur"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.activity.ClubDescriptionActivity"
+            android:parentActivityName=".view.activity.MainDonneur"></activity>
+        <activity android:name=".view.activity.ReceiverListActivity"></activity>
+        <activity android:name=".view.activity.ReceiverProfileActivity"></activity>
+        <activity
+            android:name=".view.activity.MainReceveur"
+            android:label="@string/title_activity_main_receveur"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name=".view.activity.ClubDescriptionActivity"
-            android:parentActivityName=".view.activity.MainDonneur">
-        </activity>
-
-        <activity android:name=".view.activity.ReceiverListActivity">
-
-        </activity>
-
-        <activity android:name=".view.activity.ReceiverProfileActivity">
-
-        </activity>
     </application>
 
 </manifest>

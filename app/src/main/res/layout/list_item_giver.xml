@@ -21,7 +21,7 @@
                 android:src="@android:drawable/sym_def_app_icon"/>
 
             <TextView
-                android:id="@+id/givernameTextView"
+                android:id="@+id/tv_donneur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -30,11 +30,11 @@
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
-                android:id="@+id/giverDescriptionTextView"
+                android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/givernameTextView"
+                android:layout_below="@+id/tv_donneur"
                 android:ellipsize="end"
                 android:lines="2"
                 android:scrollHorizontally="true"

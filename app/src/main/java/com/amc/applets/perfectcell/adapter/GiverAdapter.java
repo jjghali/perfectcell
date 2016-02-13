@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.amc.applets.perfectcell.R;
 import com.amc.applets.perfectcell.model.Giver;
-import com.amc.applets.perfectcell.model.Receiver;
 
 import java.util.ArrayList;
 
@@ -50,8 +49,8 @@ public class GiverAdapter extends ArrayAdapter<Giver> {
         }
 
         Giver giver = getItem(position);
-        TextView nameView = (TextView) convertView.findViewById(R.id.givernameTextView);
-        TextView descriptionView = (TextView)convertView.findViewById(R.id.giverDescriptionTextView);
+        TextView nameView = (TextView) convertView.findViewById(R.id.tv_donneur);
+        TextView descriptionView = (TextView)convertView.findViewById(R.id.tv_description);
         ImageView imageView = (ImageView)convertView.findViewById(R.id.logoImageView);
 
         nameView.setText(giver.getName());
