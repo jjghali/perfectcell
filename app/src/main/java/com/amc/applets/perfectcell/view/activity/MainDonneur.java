@@ -68,9 +68,15 @@ public class MainDonneur extends AppCompatActivity
 
                     // request successful (status code 200, 201)
                     List<Giver> result = response.body();
-                    ArrayList<Giver> givers = new ArrayList<>(result);
+                    ArrayList<Giver> users = new ArrayList<>(result);
+                    ArrayList<Giver> filteredGivers = new ArrayList<>();
 
-                    mListView.setAdapter(new GiverAdapter(MainDonneur.this, givers));
+                    for(Giver giver : users){
+                        if(giver.getTypeUsager().equals("giver")){
+                            filteredGivers.add(giver);
+                        }
+                    }
+                    mListView.setAdapter(new GiverAdapter(MainDonneur.this, filteredGivers));
                     mListView.setEmptyView(emptyListGiverTextView);
 
                 } else {
@@ -102,7 +108,7 @@ public class MainDonneur extends AppCompatActivity
         ArrayList<Giver> givers = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            Giver g = new Giver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1));
+            Giver g = new Giver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1), "giver");
             givers.add(g);
         }
         return givers;
