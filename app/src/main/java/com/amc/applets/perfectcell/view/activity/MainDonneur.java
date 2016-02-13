@@ -57,7 +57,7 @@ public class MainDonneur extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //obtain client interface instance
+        //obtain http client interface instance
         ApiInterface api = RestClient.getClient();
         Call<List<Giver>> call = api.listUsers();
 

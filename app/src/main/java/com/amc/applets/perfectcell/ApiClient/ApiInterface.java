@@ -1,6 +1,7 @@
 package com.amc.applets.perfectcell.ApiClient;
 
 import com.amc.applets.perfectcell.model.AbstractUser;
+import com.amc.applets.perfectcell.model.Donation;
 import com.amc.applets.perfectcell.model.Giver;
 import com.amc.applets.perfectcell.model.Receiver;
 
@@ -20,19 +21,21 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
     @Headers("User-Agent: PerfectCell-AMC2016")
-    @GET("/receivers/")
-    Call<List<Receiver>> getReceivers();
 
-    @GET("/receivers/{id}")
-    Call<Receiver> getReceiversById(@Query("q") String id);
 
     @GET("/givers/")
     Call<List<Giver>> getGivers();
 
+    /*
     @GET("/givers/(id}")
     Call<Giver> getGiversById(@Query("q") String id);
+    */
+
     @GET("/perfectcell-api/users/list")
     Call<List<Giver>> listUsers();
+
+    @GET("/perfectcell-api/donations/list")
+    Call<List<Donation>> listDonations();
 
     @GET("/getuser/{id}")
     Call<AbstractUser> getUser(@Query("q") String id);

@@ -88,7 +88,7 @@ public class MainReceveur extends AppCompatActivity
                 fragmentManager.beginTransaction().replace(R.id.container, accueilFragment).commit();
                 break;
             case R.id.nav_historique:
-                setTitle("historique des transactions");
+                setTitle("Historique des transactions");
                 ReceiverHistoriqueFragment receiverHistoriqueFragment = new ReceiverHistoriqueFragment();
                 fragmentManager.beginTransaction().replace(R.id.container, receiverHistoriqueFragment).commit();
                 break;
@@ -98,7 +98,7 @@ public class MainReceveur extends AppCompatActivity
                 fragmentManager.beginTransaction().replace(R.id.container, receiverTransactionFragment).commit();
                 break;
             case R.id.nav_profil:
-                setTitle("profil");
+                setTitle("Profil");
                 ChangeProfileFragment changeProfileFragment = new ChangeProfileFragment();
                 fragmentManager.beginTransaction().replace(R.id.container, changeProfileFragment).commit();
                 break;
