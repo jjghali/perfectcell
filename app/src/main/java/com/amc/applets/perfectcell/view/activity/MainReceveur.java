@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import com.amc.applets.perfectcell.R;
 import com.amc.applets.perfectcell.view.fragment.ChangeProfileFragment;
 import com.amc.applets.perfectcell.view.fragment.ReceiverHistoriqueFragment;
-import com.amc.applets.perfectcell.view.fragment.ReceiverInboxFragment;
+import com.amc.applets.perfectcell.view.fragment.AccueilFragment;
 import com.amc.applets.perfectcell.view.fragment.ReceiverTransactionFragment;
 
 public class MainReceveur extends AppCompatActivity
@@ -28,8 +28,8 @@ public class MainReceveur extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setTitle("Profil");
-        ChangeProfileFragment fragment = new ChangeProfileFragment();
+        setTitle("Accueil");
+        AccueilFragment fragment = new AccueilFragment();
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -81,10 +81,10 @@ public class MainReceveur extends AppCompatActivity
 
         int id = item.getItemId();
         switch(id) {
-            case R.id.nav_message:
-                setTitle("Message");
-                ReceiverInboxFragment receiverInboxFragment = new ReceiverInboxFragment();
-                fragmentManager.beginTransaction().replace(R.id.container, receiverInboxFragment).commit();
+            case R.id.nav_accueil:
+                setTitle("Accueil");
+                AccueilFragment accueilFragment = new AccueilFragment();
+                fragmentManager.beginTransaction().replace(R.id.container, accueilFragment).commit();
                 break;
             case R.id.nav_historique:
                 setTitle("historique des transactions");
