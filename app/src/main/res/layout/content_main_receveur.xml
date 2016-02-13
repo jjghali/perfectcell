@@ -15,7 +15,7 @@
     tools:context="com.amc.applets.perfectcell.view.activity.MainReceveur"
     tools:showIn="@layout/app_bar_main_receveur">
 
-    <android.support.v7.widget.CardView
+    <!--<android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,6 +52,6 @@
                 android:layout_below="@+id/tv_donneur"
                 android:text="A donné 5000$" />
         </RelativeLayout>
-    </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>-->
 
 </FrameLayout>

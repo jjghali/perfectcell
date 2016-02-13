@@ -2,7 +2,6 @@ package com.amc.applets.perfectcell.view.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -29,6 +28,7 @@ public class MainReceveur extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        setTitle("Profil");
         ChangeProfileFragment fragment = new ChangeProfileFragment();
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 
@@ -79,26 +79,32 @@ public class MainReceveur extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
 
-        Fragment fragment;
         int id = item.getItemId();
         switch(id) {
             case R.id.nav_message:
-                fragment = new ReceiverInboxFragment();
+                setTitle("Message");
+                ReceiverInboxFragment receiverInboxFragment = new ReceiverInboxFragment();
+                fragmentManager.beginTransaction().replace(R.id.container, receiverInboxFragment).commit();
                 break;
             case R.id.nav_historique:
-                fragment = new ReceiverHistoriqueFragment();
+                setTitle("historique des transactions");
+                ReceiverHistoriqueFragment receiverHistoriqueFragment = new ReceiverHistoriqueFragment();
+                fragmentManager.beginTransaction().replace(R.id.container, receiverHistoriqueFragment).commit();
                 break;
             case R.id.nav_transaction:
-                fragment = new ReceiverTransactionFragment();
+                setTitle("Noter une transaction");
+                ReceiverTransactionFragment receiverTransactionFragment = new ReceiverTransactionFragment();
+                fragmentManager.beginTransaction().replace(R.id.container, receiverTransactionFragment).commit();
                 break;
             case R.id.nav_profil:
-                fragment = new ChangeProfileFragment();
+                setTitle("profil");
+                ChangeProfileFragment changeProfileFragment = new ChangeProfileFragment();
+                fragmentManager.beginTransaction().replace(R.id.container, changeProfileFragment).commit();
                 break;
             default:
-                fragment = new ReceiverHistoriqueFragment();
                 break;
         }
-        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

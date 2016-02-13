@@ -13,30 +13,66 @@
 
     <EditText
         android:id="@+id/et_nom_groupe"
+        android:inputType="textMultiLine"
+        android:minLines="1"
+        android:gravity="top|left"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:scrollbars="vertical"
+        android:hint="Nom du club"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sommaire"
+        android:text="Sommaire:"
         android:textSize="24sp"/>
 
     <EditText
         android:id="@+id/et_sommaire"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:gravity="top|left"
+        android:maxLines="3"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:scrollbars="vertical"
+        android:hint="Écrire ici brièvement les activités du club"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mission"
+        android:text="Mission:"
         android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/et_mission"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:hint="Écrire ici en détail ce que le groupe fait"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Besoin"
+        android:text="Besoin:"
         android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/et_besoin"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:hint="i.e. argent, oscilloscope, etc..."/>
 
 </LinearLayout>
