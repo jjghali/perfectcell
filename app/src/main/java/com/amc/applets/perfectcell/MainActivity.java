@@ -5,17 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.bt_donneur)
-    Button bt_donneur;
+    @Bind(R.id.ll_donneur)
+    LinearLayout ll_donneur;
 
-    @Bind(R.id.bt_receveur)
-    Button bt_receveur;
+    @Bind(R.id.ll_receveur)
+    LinearLayout ll_receveur;
 
 
     @Override
@@ -24,19 +25,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        bt_donneur.setOnClickListener(this);
-        bt_receveur.setOnClickListener(this);
+        ll_donneur.setOnClickListener(this);
+        ll_receveur.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent;
         switch(v.getId()){
-            case R.id.bt_donneur:
+            case R.id.ll_donneur:
                 intent = new Intent(this,MainDonneur.class);
                 startActivity(intent);
                 break;
-            case R.id.bt_receveur:
+            case R.id.ll_receveur:
                 intent = new Intent(this,MainReceveur.class);
                 startActivity(intent);
                 break;
