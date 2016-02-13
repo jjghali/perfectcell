@@ -23,6 +23,9 @@
         <activity android:name=".MainReceveur">
 
         </activity>
+        <activity android:name=".view.activity.ReceiverListActivity">
+
+        </activity>
     </application>
 
 </manifest>
