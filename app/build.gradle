@@ -32,4 +32,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.0'
     compile 'com.thedeanda:lorem:2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
 }
