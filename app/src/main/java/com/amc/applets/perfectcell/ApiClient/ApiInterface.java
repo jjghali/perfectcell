@@ -1,5 +1,6 @@
 package com.amc.applets.perfectcell.ApiClient;
 
+import com.amc.applets.perfectcell.model.AbstractUser;
 import com.amc.applets.perfectcell.model.Giver;
 import com.amc.applets.perfectcell.model.Receiver;
 
@@ -28,6 +29,11 @@ public interface ApiInterface {
 
     @GET("/givers/(id}")
     Call<Giver> getGiversById(@Query("q") String id);
+    @GET("/users/list")
+    Call<List<AbstractUser>> listUsers();
+
+    @GET("/getuser/{id}")
+    Call<AbstractUser> getUser(@Query("q") String id);
 
 
 }
