@@ -20,6 +20,7 @@ import com.amc.applets.perfectcell.R;
 import com.amc.applets.perfectcell.adapter.GiverAdapter;
 import com.amc.applets.perfectcell.model.Giver;
 import com.amc.applets.perfectcell.model.Receiver;
+import com.amc.applets.perfectcell.utils.NetworkUtils;
 import com.thedeanda.lorem.LoremIpsum;
 
 import java.util.ArrayList;
