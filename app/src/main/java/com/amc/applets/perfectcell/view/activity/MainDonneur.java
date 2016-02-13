@@ -74,7 +74,7 @@ public class MainDonneur extends AppCompatActivity
                     ArrayList<Giver> filteredGivers = new ArrayList<>();
 
                     for(Giver giver : users){
-                        if(giver.getTypeUsager().equals("receiver")){
+                        if(giver.getTypeUsager() != null && giver.getTypeUsager().equals("receiver")){
                             filteredGivers.add(giver);
                         }
                     }

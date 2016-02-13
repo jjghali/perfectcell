@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.amc.applets.perfectcell.R;
 
+import java.util.Set;
+
 public class ReceiverHistoriqueFragment extends Fragment {
 
     private Context mContext;
@@ -36,7 +38,6 @@ public class ReceiverHistoriqueFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_receiver_historique, container, false);
-        mRelativeLayout = (LinearLayout) v.findViewById(R.id.rl);
         return v;
     }
 
@@ -44,12 +45,12 @@ public class ReceiverHistoriqueFragment extends Fragment {
     public void onResume(){
         super.onResume();
 
-        for(int i=0; i<=4; i++){
+        /*for(int i=0; i<=4; i++){
             renderCardViews("Summit"+i,500*i);
-        }
+        }*/
     }
 
-    private void renderCardViews(String nom, double montant){
+    /*private void renderCardViews(String nom, double montant){
         // Initialize a new CardView
         CardView card = new CardView(mContext);
 
@@ -69,8 +70,8 @@ public class ReceiverHistoriqueFragment extends Fragment {
         card.setContentPadding(15, 15, 15, 15);
 
 
-        /*// Set a background color for CardView
-        card.setCardBackgroundColor(Color.parseColor("#FFC6D6C3"));*/
+        // Set a background color for CardView
+        card.setCardBackgroundColor(Color.parseColor("#FFC6D6C3"));*//*
 
                 // Set the CardView maximum elevation
                 //card.setMaxCardElevation(15);
@@ -92,7 +93,7 @@ public class ReceiverHistoriqueFragment extends Fragment {
 
         // Finally, add the CardView in root layout
         mRelativeLayout.addView(card);
-    }
+    }*/
 
 
 }
