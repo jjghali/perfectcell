@@ -20,7 +20,7 @@ public class RestClient {
     /**
      * Define API Base URL
      */
-    private final static String apiUrl = "http://api.someurl.com";
+    private final static String apiUrl = "http://159.203.31.79:8080";
 
     /**
      * Return an instance of the API access interface for calling endpoints.
