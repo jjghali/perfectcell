@@ -152,32 +152,25 @@ public class MainDonneur extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.applets) {
-            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+        if (id == R.id.ets) {
+            /*Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
             Bundle args = new Bundle();
             args.putString("clubName", "applets");
             clubIntent.putExtra("extra", args);
-            startActivity(clubIntent);
-        } else if (id == R.id.baja) {
-            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+            startActivity(clubIntent);*/
+        } else if (id == R.id.udem) {
+            /*Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
             Bundle args = new Bundle();
             args.putString("clubName", "baja");
             clubIntent.putExtra("extra", args);
-            startActivity(clubIntent);
+            startActivity(clubIntent);*/
 
-        } else if (id == R.id.conjure) {
-            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
+        } else if (id == R.id.uqam) {
+            /*Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
             Bundle args = new Bundle();
             args.putString("clubName", "conjure");
             clubIntent.putExtra("extra", args);
-            startActivity(clubIntent);
-
-        } else if (id == R.id.Énergie) {
-            Intent clubIntent = new Intent(this, ClubDescriptionActivity.class);
-            Bundle args = new Bundle();
-            args.putString("clubName", "Énergie ETS");
-            clubIntent.putExtra("extra", args);
-            startActivity(clubIntent);
+            startActivity(clubIntent);*/
 
         } else if (id == R.id.nav_send) {
 

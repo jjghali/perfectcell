@@ -1,17 +1,12 @@
 package com.amc.applets.perfectcell.view.fragment;
 
-import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NavUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -20,24 +15,20 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amc.applets.perfectcell.R;
-import com.thedeanda.lorem.LoremIpsum;
 
 
 public class ReceiverTransactionFragment extends Fragment {
 
     private Spinner donatorSpinner,donationTypeSpinner;
     private CoordinatorLayout coordinatorLayout;
-    private EditText messageET;
+    private EditText messageET, montantET;
     private String donationType[] = {"MONEY", "OTHERS"};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
 
     }
 
@@ -60,14 +51,18 @@ public class ReceiverTransactionFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                if(montantET.getText().toString().equals(""))
+                 Toast.makeText(getActivity(),"Tu dois inscrire un montant!",Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getActivity(),"NICE!!",Toast.LENGTH_SHORT).show();
             }
         });
         textView.setGravity(Gravity.CENTER);
         textView.setTextSize(24);
         snackbar.setDuration(Snackbar.LENGTH_INDEFINITE).show();
 
-messageET = (EditText) v.findViewById(R.id.messageET);
+        messageET = (EditText) v.findViewById(R.id.descriptionET);
+        montantET = (EditText) v.findViewById(R.id.montantET);
 
         donatorSpinner = (Spinner) v.findViewById(R.id.donatorSpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -89,10 +84,11 @@ messageET = (EditText) v.findViewById(R.id.messageET);
         donationTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0)
-                    messageET.setHint("Amount");
-                else
-                    messageET.setHint("Description");
+                if (position == 0) {
+                    messageET.setVisibility(View.INVISIBLE);
+                } else {
+                    messageET.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
