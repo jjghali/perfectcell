@@ -1,9 +1,10 @@
-package com.amc.applets.perfectcell;
+package com.amc.applets.perfectcell.view.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+
+import com.amc.applets.perfectcell.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,6 +23,5 @@ public class MainReceveur extends AppCompatActivity{
         setContentView(R.layout.activity_main_receveur);
         ButterKnife.bind(this);
         setTitle(getString(R.string.role_receveur));
-        Snackbar.make(snack,"hello world!!", Snackbar.LENGTH_SHORT).show();
     }
 }

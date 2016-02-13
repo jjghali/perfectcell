@@ -1,28 +1,44 @@
-package com.amc.applets.perfectcell;
+package com.amc.applets.perfectcell.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.amc.applets.perfectcell.R;
+import com.amc.applets.perfectcell.adapter.GiverAdapter;
+import com.amc.applets.perfectcell.model.Giver;
+import com.thedeanda.lorem.LoremIpsum;
+
+import java.util.ArrayList;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainDonneur extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    @Bind(R.id.giverListView)
+    public ListView mListView;
+    @Bind(R.id.emptyListGiver)
+    public TextView emptyListGiverTextView;
 
-    FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_donneur);
+        ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        fragmentManager = getSupportFragmentManager();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -32,6 +48,30 @@ public class MainDonneur extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mListView.setAdapter(new GiverAdapter(this, getDateSet()));
+        mListView.setEmptyView(emptyListGiverTextView);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent clubIntent = new Intent(MainDonneur.this, ClubDescriptionActivity.class);
+                Bundle args = new Bundle();
+                args.putString("clubName", "applets");
+                clubIntent.putExtra("extra", args);
+                startActivity(clubIntent);
+            }
+        });
+    }
+
+    public ArrayList<Giver> getDateSet() {
+        ArrayList<Giver> givers = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            Giver g = new Giver(LoremIpsum.getInstance().getName(), LoremIpsum.getInstance().getParagraphs(1, 1));
+            givers.add(g);
+        }
+        return givers;
     }
 
     @Override

@@ -15,21 +15,23 @@ import com.thedeanda.lorem.LoremIpsum;
 
 import java.util.ArrayList;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class ReceiverListActivity extends AppCompatActivity {
 
-
-    private ListView mListView;
-    private TextView emptyListReceiverTextView;
-
+    @Bind(R.id.receiverListView)
+    public ListView mListView;
+    @Bind(R.id.emptyListReceiver)
+    public TextView emptyListReceiverTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receiver_list);
+        ButterKnife.bind(this);
 
         setTitle(R.string.receiver_title);
-        emptyListReceiverTextView = (TextView) findViewById(R.id.emptyListReceiver);
-        mListView = (ListView) findViewById(R.id.receiverListView);
         mListView.setAdapter(new ReceiverAdapter(this, getDateSet()));
         mListView.setEmptyView(emptyListReceiverTextView);
 

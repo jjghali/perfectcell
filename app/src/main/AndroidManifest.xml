@@ -8,24 +8,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainReceveur" />
+        <activity android:name=".view.activity.MainReceveur" />
         <activity
-            android:name=".MainDonneur"
+            android:name=".view.activity.MainDonneur"
             android:label="@string/title_activity_main_donneur"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
-        <activity android:name=".ClubDescriptionActivity"
-            android:parentActivityName=".MainDonneur">
+        <activity android:name=".view.activity.ClubDescriptionActivity"
+            android:parentActivityName=".view.activity.MainDonneur">
         </activity>
 
         <activity android:name=".view.activity.ReceiverListActivity">
+
+        </activity>
+
+        <activity android:name=".view.activity.ReceiverProfileActivity">
 
         </activity>
     </application>

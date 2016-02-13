@@ -1,4 +1,4 @@
-package com.amc.applets.perfectcell;
+package com.amc.applets.perfectcell.view.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.amc.applets.perfectcell.R;
+import com.thedeanda.lorem.LoremIpsum;
+
+import java.util.ArrayList;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -18,6 +23,10 @@ public class ClubDescriptionActivity extends AppCompatActivity {
 
     @Bind(R.id.club_snackbar)
     CoordinatorLayout coordinatorLayout;
+    @Bind(R.id.missionDescriptionTextView)
+    public TextView missionDescriptionTextView;
+    /*@Bind(R.id.needsListView)
+    public ListView needListView;*/
 
     String clubName;
 
@@ -58,9 +67,20 @@ public class ClubDescriptionActivity extends AppCompatActivity {
         textView.setGravity(Gravity.CENTER);
         textView.setTextSize(24);
         snackbar.setDuration(Snackbar.LENGTH_INDEFINITE).show();
+        missionDescriptionTextView.setText(LoremIpsum.getInstance().getParagraphs(1, 1));
+        /*needListView.setAdapter(new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, getDummyNeeds()));*/
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         recreate();
+    }
+
+    public ArrayList<String> getDummyNeeds(){
+        ArrayList needs = new ArrayList();
+        for(int i=0;i<10;i++){
+            needs.add("Need "+i);
+        }
+        return needs;
     }
 }

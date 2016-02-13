@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.amc.applets.perfectcell.view.activity.ReceiverProfileActivity">
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -97,5 +97,5 @@
             android:layout_height="wrap_content"
             android:text="Support in another way" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 </ScrollView>
