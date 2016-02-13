@@ -20,7 +20,7 @@ public class RestClient {
     /**
      * Define API Base URL
      */
-    private final static String apiUrl = "http://159.203.31.79:8080";
+    private final static String apiUrl = "http://159.203.31.79:8080/";
 
     /**
      * Return an instance of the API access interface for calling endpoints.
@@ -31,13 +31,13 @@ public class RestClient {
 
             //Instanciate api client
             OkHttpClient okClient = new OkHttpClient();
-            okClient.interceptors().add(new Interceptor() {
+            /*okClient.interceptors().add(new Interceptor() {
                 @Override
                 public Response intercept(Chain chain) throws IOException {
                     Response response = chain.proceed(chain.request());
                     return response;
                 }
-            });
+            });*/
 
             //Instanciate retrofit instance with JSON object converter. (GSON based)
             Retrofit client = new Retrofit.Builder()

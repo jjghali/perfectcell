@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.amc.applets.perfectcell.view.fragment.ReceiverInboxFragment">
+    tools:context=".view.fragment.AccueilFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
