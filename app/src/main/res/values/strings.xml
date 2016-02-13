@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PerfectCell</string>
+
+    <!--Main Activity strings-->
+    <string name="role_chooser">Veuillez choisir votre rôle</string>
+    <string name="role_donneur">Receveur</string>
+    <string name="role_receveur">Donneur</string>
+
+
 </resources>

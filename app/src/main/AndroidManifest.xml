@@ -15,6 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainDonneur">
+
+        </activity>
+
+        <activity android:name=".MainReceveur">
+
+        </activity>
     </application>
 
 </manifest>
